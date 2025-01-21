@@ -1,0 +1,19 @@
+[
+    {
+      "id": 1,
+      "title": "Airbnb One Bedroom in Shooters",
+      "location": "Shooters, Nairobi",
+      "price": 2000,
+      "images": ["https://via.placeholder.com/400x300?text=Shooters+1"],
+      "description": "A cozy one-bedroom apartment located in Shooters."
+    },
+    {
+      "id": 2,
+      "title": "Studio Bedsitter in Astrol",
+      "location": "Astrol, Nairobi",
+      "price": 1500,
+      "images": ["https://via.placeholder.com/400x300?text=Astrol+1"],
+      "description": "A convenient studio bedsitter in Astrol."
+    }
+  ]
+  
