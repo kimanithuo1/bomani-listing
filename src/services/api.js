@@ -1,24 +1,24 @@
-import axios from 'axios';
+import axios from "axios"
 
-// Base API configuration
-const api = axios.create({
-  baseURL: 'https://example.com/api', // Replace with your API base URL
-});
+const API_BASE_URL = "https://api.example.com" // Replace with your actual API base URL
 
-// Fetch listings
-export const fetchListings = async () => {
-  const response = await api.get('/listings');
-  return response.data;
-};
+export const fetchListings = async (searchParams) => {
+  try {
+    const response = await axios.get(`${API_BASE_URL}/listings`, { params: searchParams })
+    return response.data
+  } catch (error) {
+    console.error("Error fetching listings:", error)
+    throw error
+  }
+}
 
-// Fetch listing details by ID
-export const fetchListingDetails = async (id) => {
-  const response = await api.get(`/listings/${id}`);
-  return response.data;
-};
+export const fetchPropertyDetails = async (propertyId) => {
+  try {
+    const response = await axios.get(`${API_BASE_URL}/properties/${propertyId}`)
+    return response.data
+  } catch (error) {
+    console.error("Error fetching property details:", error)
+    throw error
+  }
+}
 
-// Submit a new listing
-export const submitListing = async (data) => {
-  const response = await api.post('/listings', data);
-  return response.data;
-};

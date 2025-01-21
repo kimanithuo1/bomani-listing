@@ -1,14 +1,22 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
-        mintGreen: '#B7DBC8',
-        teal: '#285D66',
-        yellow: '#E1DF66',
-        seaGreen: '#6DA095',
+        mint: "#B7DBC8",
+        teal: "#285D66",
+        yellow: "#E1DF66",
+        sea: "#6DA095",
+      },
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
+      },
+      boxShadow: {
+        custom: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
       },
     },
   },
-};
+  plugins: [],
+}
+

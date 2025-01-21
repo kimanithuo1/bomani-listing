@@ -1,4 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans bg-mint/10 text-gray-800;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn {
+    @apply px-4 py-2 rounded-lg font-semibold transition-colors duration-200 inline-block text-center;
+  }
+
+  .btn-primary {
+    @apply bg-yellow text-teal hover:bg-sea hover:text-white;
+  }
+
+  .btn-secondary {
+    @apply bg-mint text-teal hover:bg-sea hover:text-white;
+  }
+
+  .input {
+    @apply w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sea focus:border-transparent transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-custom p-6 transition-all duration-200 hover:shadow-lg;
+  }
+
+  .nav-link {
+    @apply flex flex-col items-center px-4 py-2 rounded-lg hover:bg-sea transition-colors text-white/90 hover:text-white;
+  }
+
+  .nav-link-icon {
+    @apply text-2xl mb-1;
+  }
+
+  .nav-link-label {
+    @apply font-medium;
+  }
+
+  .nav-link-description {
+    @apply text-xs text-center mt-1;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+}
 
