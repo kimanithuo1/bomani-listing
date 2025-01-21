@@ -1,2 +1,0 @@
-# bomani-listing
-Hosting website
