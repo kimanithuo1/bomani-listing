@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply font-sans bg-mint/10 text-gray-800;
+    @apply font-sans bg-gradient-custom text-teal min-h-screen;
   }
 }
 
@@ -36,7 +36,7 @@
   }
 
   .nav-link {
-    @apply flex flex-col items-center px-4 py-2 rounded-lg hover:bg-sea transition-colors text-white/90 hover:text-white;
+    @apply flex flex-col items-center px-4 py-2 rounded-lg hover:bg-sea transition-colors text-teal hover:text-white;
   }
 
   .nav-link-icon {
@@ -49,6 +49,48 @@
 
   .nav-link-description {
     @apply text-xs text-center mt-1;
+  }
+
+  .listing-card {
+    @apply bg-white rounded-lg overflow-hidden shadow-custom transition-transform duration-300 hover:scale-103;
+  }
+
+  .listing-image {
+    @apply w-full h-48 object-cover;
+  }
+
+  .listing-details {
+    @apply p-4;
+  }
+
+  .listing-title {
+    @apply text-lg font-bold text-teal;
+  }
+
+  .listing-description {
+    @apply text-gray-600 mt-2;
+  }
+
+  .listing-price {
+    @apply font-bold text-teal mt-2;
+  }
+
+  .dashboard-form {
+    @apply max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-custom;
+  }
+
+  .dashboard-form label {
+    @apply block font-bold text-teal mb-2;
+  }
+
+  .dashboard-form input,
+  .dashboard-form select,
+  .dashboard-form textarea {
+    @apply w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sea focus:border-transparent;
+  }
+
+  .dashboard-form button {
+    @apply w-full mt-4 bg-teal text-white font-bold py-3 rounded-lg hover:bg-sea transition-colors duration-200;
   }
 }
 

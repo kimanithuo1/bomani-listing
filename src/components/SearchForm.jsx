@@ -26,9 +26,10 @@ const SearchForm = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {/* Location */}
           <div className="relative">
-            <label className="block text-sm font-medium text-gray-700 mb-1">Where are you going?</label>
+            <label htmlFor="location" className="block text-sm font-medium text-gray-700 mb-1">Where are you going?</label>
             <input
               type="text"
+              id="location"
               placeholder="Enter destination"
               className="input"
               value={searchParams.location}
@@ -38,9 +39,10 @@ const SearchForm = () => {
 
           {/* Check-in */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Check-in Date</label>
+            <label htmlFor="checkIn" className="block text-sm font-medium text-gray-700 mb-1">Check-in Date</label>
             <input
               type="date"
+              id="checkIn"
               className="input"
               value={searchParams.checkIn}
               onChange={(e) => setSearchParams({ ...searchParams, checkIn: e.target.value })}
@@ -49,9 +51,10 @@ const SearchForm = () => {
 
           {/* Check-out */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Check-out Date</label>
+            <label htmlFor="checkOut" className="block text-sm font-medium text-gray-700 mb-1">Check-out Date</label>
             <input
               type="date"
+              id="checkOut"
               className="input"
               value={searchParams.checkOut}
               onChange={(e) => setSearchParams({ ...searchParams, checkOut: e.target.value })}
@@ -91,4 +94,3 @@ const SearchForm = () => {
 }
 
 export default SearchForm
-

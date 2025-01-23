@@ -1,16 +1,42 @@
+import { useState } from "react"
+import { motion } from "framer-motion"
+import SearchForm from "../components/SearchForm"
+
 const Flights = () => {
-    return (
-      <div className="container py-8">
-        <h1 className="text-3xl font-bold text-teal mb-6">Book Your Flights</h1>
-        {/* Add flight search form here */}
-        <section className="mt-12">
-          <h2 className="text-2xl font-semibold text-teal mb-4">Popular Routes</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">{/* Add popular routes here */}</div>
-        </section>
-      </div>
-    )
-  }
-  
-  export default Flights
-  
-  
+  const [popularRoutes] = useState([
+    { from: "New York", to: "London", price: 450, airline: "TransAtlantic Airways" },
+    { from: "Tokyo", to: "Los Angeles", price: 780, airline: "Pacific Flyers" },
+    { from: "Dubai", to: "Paris", price: 380, airline: "EuroConnect" },
+    { from: "Sydney", to: "Singapore", price: 320, airline: "AsiaPacific Air" },
+  ])
+
+  return (
+    <div className="container py-8">
+      <h1 className="section-title">Book Your Flights</h1>
+      <SearchForm />
+      <section className="mt-12">
+        <h2 className="section-title">Popular Routes</h2>
+        <div className="grid grid-cols-1 grid-cols-2 grid-cols-4">
+          {popularRoutes.map((route, index) => (
+            <motion.div
+              key={`${route.from}-${route.to}`}
+              className="card fade-in"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <h3 className="text-lg font-semibold">
+                {route.from} to {route.to}
+              </h3>
+              <p className="text-gray-600">{route.airline}</p>
+              <p className="text-sea font-bold mt-2">From ${route.price}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+    </div>
+  )
+}
+
+export default Flights
+

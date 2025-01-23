@@ -10,10 +10,13 @@ export default {
         sea: "#6DA095",
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
+        sans: ["Inter", "Arial", "sans-serif"],
       },
       boxShadow: {
-        custom: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+        custom: "0 4px 6px rgba(0, 0, 0, 0.1)",
+      },
+      backgroundImage: {
+        "gradient-custom": "linear-gradient(to right, #B7DBC8, #6DA095)",
       },
     },
   },
