@@ -9,6 +9,21 @@ import AirportTaxis from "./pages/AirportTaxis"
 import SearchResults from "./pages/SearchResults"
 import PropertyDetails from "./pages/PropertyDetails"
 import Header from "./components/Header"
+import Careers from "./pages/Careers"
+import PressCenter from "./pages/PressCenter"
+import InvestorRelations from "./pages/InvestorRelations"
+import Countries from "./pages/Countries"
+import Cities from "./pages/Cities"
+import Airports from "./pages/Airports"
+import Hotels from "./pages/Hotels"
+import HelpCenter from "./pages/HelpCenter"
+import FAQ from "./pages/FAQ"
+import PrivacyPolicy from "./pages/PrivacyPolicy"
+import TermsOfService from "./pages/TermsOfService"
+import SignIn from './pages/SignIn'
+import Register from './pages/Register'
+import ListProperty from './pages/ListProperty'
+
 
 function App() {
   return (
@@ -18,6 +33,11 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/list-property" element={<ListProperty />} />
+            <Route path="/sign-in" element={<SignIn />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/home" element={<Home />} />
+            
             <Route path="/stays" element={<Stays />} />
             <Route path="/flights" element={<Flights />} />
             <Route path="/packages" element={<Packages />} />
@@ -26,11 +46,23 @@ function App() {
             <Route path="/airport-taxis" element={<AirportTaxis />} />
             <Route path="/search-results" element={<SearchResults />} />
             <Route path="/property/:id" element={<PropertyDetails />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/press" element={<PressCenter />} />
+            <Route path="/investor-relations" element={<InvestorRelations />} />
+            <Route path="/countries" element={<Countries />} />
+            <Route path="/cities" element={<Cities />} />
+            <Route path="/airports" element={<Airports />} />
+            <Route path="/hotels" element={<Hotels />} />
+            <Route path="/help" element={<HelpCenter />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/terms" element={<TermsOfService />} />
+
           </Routes>
         </main>
         <footer className="footer">
           <div className="container">
-            <div className="grid grid-cols-1 grid-cols-2 grid-cols-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div>
                 <h3 className="footer-title">About Us</h3>
                 <ul className="space-y-2">

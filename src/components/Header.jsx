@@ -23,10 +23,12 @@ const Header = () => {
           </Link>
           <div className="flex items-center space-x-4">
             <select value={currency} onChange={(e) => setCurrency(e.target.value)} className="input">
+               <option value="KES">KES</option>
               <option value="USD">USD</option>
               <option value="EUR">EUR</option>
               <option value="GBP">GBP</option>
               <option value="JPY">JPY</option>
+              
             </select>
             <Link to="/list-property" className="btn btn-secondary">
               List your property
